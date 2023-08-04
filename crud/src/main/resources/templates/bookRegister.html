@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+    <title>Book_register</title>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand text-white" href="#">Book Store</a>
+        <button class="navbar-toggler" type="button"
+                data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item"><a class="nav-link active text-white"
+                                        aria-current="page" href="/">Home</a></li>
+                <li class="nav-item"><a class="nav-link text-white"
+                                        href="available_books">Available Books</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="my_books">My
+                    Books</a></li>
+            </ul>
+            <div>
+                <a class="nav-link text-white" href="book_register">New Book
+                    Register</a>
+            </div>
+        </div>
+    </div>
+</nav>
+<br><br><br>
+<div class="container my-5 p-5" style="border: 1px solid black">
+    <h4 class="text-center">New Book Register </h4>
+    <br>
+    <form class="col-md-4 offset-md-4" th:action="@{/save}" method="post">
+        <!--        name-->
+        <div class="form-group">
+            <label for="name">Name </label>
+            <input type="text" class="form-control"
+                   name="name" placeholder="Enter Name">
+        </div>
+        <br>
+        <!--     author   -->
+        <div class="form-group">
+            <label for="author">author </label>
+            <input type="text" class="form-control"
+                   name="author" placeholder="Enter author">
+        </div>
+        <br>
+        <!--    price    -->
+        <div class="form-group">
+            <label for="price">price </label>
+            <input type="number" class="form-control"
+                   name="price" placeholder="Enter price">
+        </div>
+        <br>
+        <!--  sunmit-->
+        <center>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </center>
+    </form>
+</div>
+
+
+</body>
+</html>
